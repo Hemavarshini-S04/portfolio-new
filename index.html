@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hemavarshini — Java Backend Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Syne (display) + DM Mono (code feel) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       CURSOR (custom)
+  ═══════════════════════════════════════════ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- ═══════════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">{</span>HV<span class="logo-bracket">}</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"     class="nav-link">Home</a></li>
+        <li><a href="#about"    class="nav-link">About</a></li>
+        <li><a href="#skills"   class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact"  class="nav-link">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="ph ph-sun"  id="iconSun"></i>
+        <i class="ph ph-moon" id="iconMoon"></i>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <!-- grid dots background -->
+    <div class="hero-grid"></div>
+
+    <!-- floating code blobs -->
+    <div class="blob blob-1">@RestController</div>
+    <div class="blob blob-2">SELECT * FROM</div>
+    <div class="blob blob-3">@SpringBootApp</div>
+    <div class="blob blob-4">List&lt;Employee&gt;</div>
+    <div class="blob blob-5">@GetMapping</div>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        Available for opportunities
+      </div>
+
+      <h1 class="hero-name reveal delay-1">
+        Hema<br/><span class="name-accent">varshini</span>
+      </h1>
+
+      <p class="hero-role reveal delay-2">
+        <span class="typed-text" id="typedText"></span>
+        <span class="typed-cursor">|</span>
+      </p>
+
+      <p class="hero-tagline reveal delay-3">
+        Building Scalable Backend Systems with Java
+      </p>
+
+      <p class="hero-location reveal delay-4">
+        <i class="ph ph-map-pin"></i> Chennai, India
+      </p>
+
+      <div class="hero-cta reveal delay-5">
+        <a href="#projects" class="btn btn-primary">
+          View Projects <i class="ph ph-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          Get in Touch
+        </a>
+        <a href="#" class="btn btn-ghost" id="resumeBtn">
+          <i class="ph ph-download-simple"></i> Resume
+        </a>
+      </div>
+
+      <div class="hero-socials reveal delay-5">
+        <a href="https://github.com/Hemavarshini-S04" target="_blank" class="social-link" aria-label="GitHub">
+          <i class="ph ph-github-logo"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/hemavarshini-s-44693b255" target="_blank" class="social-link" aria-label="LinkedIn">
+          <i class="ph ph-linkedin-logo"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- scroll indicator -->
+    <div class="scroll-indicator">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       ABOUT SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="label-line"></span>
+        <span>01 — About</span>
+      </div>
+
+      <div class="about-grid">
+        <!-- Left: visual card -->
+        <div class="about-visual reveal">
+          <div class="about-card">
+            <div class="about-avatar">
+              <div class="avatar-ring"></div>
+              <div class="avatar-inner">
+                <span class="avatar-initials">HV</span>
+              </div>
+            </div>
+            <div class="about-stats">
+              <div class="stat">
+                <span class="stat-num">5+</span>
+                <span class="stat-label">Projects</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat">
+                <span class="stat-num">2026</span>
+                <span class="stat-label">Graduate</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat">
+                <span class="stat-num">Java</span>
+                <span class="stat-label">Primary Stack</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: text -->
+        <div class="about-text reveal delay-2">
+          <h2 class="section-title">
+            Passionate about building<br/>
+            <span class="text-accent">robust systems</span>
+          </h2>
+          <p>
+            I'm a B.Tech Information Technology graduate with a deep passion
+            for backend development and building scalable applications. I love
+            the architecture side of software — designing clean APIs, structuring
+            databases, and writing code that actually works at scale.
+          </p>
+          <p>
+            Currently focused on mastering the Spring Boot ecosystem — REST APIs,
+            JPA, Hibernate — while keeping strong fundamentals in Core Java, OOPs,
+            and SQL. I believe in writing code that's not just functional, but
+            clean and maintainable.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <i class="ph ph-graduation-cap"></i>
+              <div>
+                <strong>B.Tech — Information Technology</strong>
+                <span>Chennai, Tamil Nadu · 2022–2026</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i class="ph ph-briefcase"></i>
+              <div>
+                <strong>Data Analyst Intern</strong>
+                <span>Basant Technology · Remote</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i class="ph ph-map-pin"></i>
+              <div>
+                <strong>Chennai, India</strong>
+                <span>Open to remote & on-site roles</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SKILLS SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="label-line"></span>
+        <span>02 — Skills</span>
+      </div>
+
+      <h2 class="section-title reveal">
+        Tech <span class="text-accent">Stack</span>
+      </h2>
+
+      <div class="skills-grid">
+
+        <!-- Java Backend (PRIMARY) -->
+        <div class="skill-card skill-primary reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon-wrap">
+              <i class="ph ph-coffee"></i>
+            </div>
+            <span class="skill-badge">Core Stack</span>
+          </div>
+          <h3>Java Backend</h3>
+          <div class="skill-tags">
+            <span class="tag tag-primary">Core Java</span>
+            <span class="tag tag-primary">OOPs</span>
+            <span class="tag tag-primary">Collections</span>
+            <span class="tag tag-primary">Exception Handling</span>
+            <span class="tag tag-primary">Java 8 Features</span>
+            <span class="tag tag-primary">Multithreading</span>
+          </div>
+          <div class="skill-bar-group">
+            <div class="skill-bar-item">
+              <span>Core Java</span>
+              <div class="bar"><div class="bar-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <span>OOPs & Design</span>
+              <div class="bar"><div class="bar-fill" data-width="80"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spring Boot -->
+        <div class="skill-card reveal delay-1">
+          <div class="skill-card-header">
+            <div class="skill-icon-wrap">
+              <i class="ph ph-leaf"></i>
+            </div>
+            <span class="skill-badge skill-badge-green">Learning</span>
+          </div>
+          <h3>Spring Ecosystem</h3>
+          <div class="skill-tags">
+            <span class="tag">Spring Boot</span>
+            <span class="tag">Spring Web</span>
+            <span class="tag">Spring Data JPA</span>
+            <span class="tag">Hibernate</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">Maven</span>
+          </div>
+          <div class="skill-bar-group">
+            <div class="skill-bar-item">
+              <span>Spring Boot</span>
+              <div class="bar"><div class="bar-fill" data-width="65"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <span>REST APIs</span>
+              <div class="bar"><div class="bar-fill" data-width="70"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Database -->
+        <div class="skill-card reveal delay-2">
+          <div class="skill-card-header">
+            <div class="skill-icon-wrap">
+              <i class="ph ph-database"></i>
+            </div>
+          </div>
+          <h3>Database</h3>
+          <div class="skill-tags">
+            <span class="tag">MySQL</span>
+            <span class="tag">SQL Queries</span>
+            <span class="tag">Joins</span>
+            <span class="tag">Subqueries</span>
+            <span class="tag">Aggregations</span>
+          </div>
+          <div class="skill-bar-group">
+            <div class="skill-bar-item">
+              <span>MySQL</span>
+              <div class="bar"><div class="bar-fill" data-width="75"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-card reveal delay-3">
+          <div class="skill-card-header">
+            <div class="skill-icon-wrap">
+              <i class="ph ph-wrench"></i>
+            </div>
+          </div>
+          <h3>Tools & Others</h3>
+          <div class="skill-tags">
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">Postman</span>
+            <span class="tag">IntelliJ IDEA</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">Python</span>
+            <span class="tag">HTML/CSS</span>
+            <span class="tag">OpenCV</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PROJECTS SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="label-line"></span>
+        <span>03 — Projects</span>
+      </div>
+
+      <h2 class="section-title reveal">
+        Things I've <span class="text-accent">Built</span>
+      </h2>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: EMS (featured) -->
+        <div class="project-card project-featured reveal">
+          <div class="project-card-inner">
+            <div class="project-top">
+              <div class="project-number">01</div>
+              <div class="project-links">
+                <a href="#" class="project-link" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+                <a href="#" class="project-link" aria-label="Live"><i class="ph ph-arrow-square-out"></i></a>
+              </div>
+            </div>
+            <div class="project-badge">Featured · Java Backend</div>
+            <h3 class="project-title">Employee Management System</h3>
+            <p class="project-desc">
+              Production-style REST API built with Spring Boot. Features full CRUD operations,
+              pagination, sorting, search, DTO pattern, global exception handling, and Swagger UI documentation.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">Java</span>
+              <span class="stack-tag">Spring Boot</span>
+              <span class="stack-tag">MySQL</span>
+              <span class="stack-tag">Spring Data JPA</span>
+              <span class="stack-tag">Swagger</span>
+              <span class="stack-tag">Maven</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: User Management API -->
+        <div class="project-card reveal delay-1">
+          <div class="project-card-inner">
+            <div class="project-top">
+              <div class="project-number">02</div>
+              <div class="project-links">
+                <a href="#" class="project-link" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+                <a href="#" class="project-link" aria-label="Live"><i class="ph ph-arrow-square-out"></i></a>
+              </div>
+            </div>
+            <div class="project-badge project-badge-blue">Spring Boot · REST API</div>
+            <h3 class="project-title">User Management REST API</h3>
+            <p class="project-desc">
+              Secure REST API for user registration, authentication, and role-based access.
+              Implements input validation, custom exception handling, and structured JSON responses.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">Java</span>
+              <span class="stack-tag">Spring Boot</span>
+              <span class="stack-tag">MySQL</span>
+              <span class="stack-tag">Hibernate</span>
+              <span class="stack-tag">Postman</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Student Management -->
+        <div class="project-card reveal delay-2">
+          <div class="project-card-inner">
+            <div class="project-top">
+              <div class="project-number">03</div>
+              <div class="project-links">
+                <a href="#" class="project-link" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+              </div>
+            </div>
+            <div class="project-badge project-badge-purple">Java · MySQL</div>
+            <h3 class="project-title">Student Management System</h3>
+            <p class="project-desc">
+              Console-based Java application to manage student records with full CRUD operations,
+              MySQL database integration using JDBC, and menu-driven interface.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">Core Java</span>
+              <span class="stack-tag">MySQL</span>
+              <span class="stack-tag">JDBC</span>
+              <span class="stack-tag">OOPs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Sign Language -->
+        <div class="project-card reveal delay-3">
+          <div class="project-card-inner">
+            <div class="project-top">
+              <div class="project-number">04</div>
+              <div class="project-links">
+                <a href="#" class="project-link" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+              </div>
+            </div>
+            <div class="project-badge project-badge-teal">AI · Accessibility</div>
+            <h3 class="project-title">Sign Language Recognition System</h3>
+            <p class="project-desc">
+              Real-time gesture recognition system that converts Indian Sign Language gestures
+              into text and speech. Achieved ~90% accuracy. Built for accessibility impact.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">OpenCV</span>
+              <span class="stack-tag">CNN</span>
+              <span class="stack-tag">Streamlit</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Zomato -->
+        <div class="project-card reveal delay-1">
+          <div class="project-card-inner">
+            <div class="project-top">
+              <div class="project-number">05</div>
+              <div class="project-links">
+                <a href="#" class="project-link" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+              </div>
+            </div>
+            <div class="project-badge project-badge-orange">Data Analytics</div>
+            <h3 class="project-title">Zomato Global Analysis</h3>
+            <p class="project-desc">
+              Analyzed 9,500+ restaurant records. Complex SQL queries with JOINs, GROUP BY,
+              and aggregations. Interactive Power BI dashboard with 5 visual panels.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">SQL</span>
+              <span class="stack-tag">Power BI</span>
+              <span class="stack-tag">Data Cleaning</span>
+              <span class="stack-tag">MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: Supermarket -->
+        <div class="project-card reveal delay-2">
+          <div class="project-card-inner">
+            <div class="project-top">
+              <div class="project-number">06</div>
+              <div class="project-links">
+                <a href="#" class="project-link" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+              </div>
+            </div>
+            <div class="project-badge project-badge-orange">Data · Python</div>
+            <h3 class="project-title">Supermarket Sales Analysis</h3>
+            <p class="project-desc">
+              Exploratory data analysis on supermarket sales dataset. Used Python for cleaning,
+              analysis, and visualization to surface actionable business insights.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">Pandas</span>
+              <span class="stack-tag">Matplotlib</span>
+              <span class="stack-tag">EDA</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="label-line"></span>
+        <span>04 — Contact</span>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-left reveal">
+          <h2 class="section-title">
+            Let's <span class="text-accent">Connect</span>
+          </h2>
+          <p class="contact-sub">
+            I'm actively looking for Java Backend Developer opportunities.
+            Whether it's a job, internship, or just a conversation about tech —
+            my inbox is open!
+          </p>
+
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="ph ph-envelope-simple"></i></div>
+              <div>
+                <span class="contact-label">Email</span>
+                <a href="mailto:varshini112004@gmail.com" class="contact-value">varshini112004@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="ph ph-map-pin"></i></div>
+              <div>
+                <span class="contact-label">Location</span>
+                <span class="contact-value">Chennai, India</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <a href="https://github.com/Hemavarshini-S04" target="_blank" class="social-btn">
+              <i class="ph ph-github-logo"></i> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/hemavarshini-s-44693b255" target="_blank" class="social-btn">
+              <i class="ph ph-linkedin-logo"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-right reveal delay-2">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">Your Name</label>
+                <input type="text" id="fname" name="name" placeholder="Recruiter Name" required />
+              </div>
+              <div class="form-group">
+                <label for="femail">Email Address</label>
+                <input type="email" id="femail" name="email" placeholder="recruiter@company.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="fsubject">Subject</label>
+              <input type="text" id="fsubject" name="subject" placeholder="Job Opportunity — Java Backend" />
+            </div>
+            <div class="form-group">
+              <label for="fmessage">Message</label>
+              <textarea id="fmessage" name="message" rows="5" placeholder="Hi Hemavarshini, I came across your profile..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              Send Message <i class="ph ph-paper-plane-tilt"></i>
+            </button>
+            <div class="form-success" id="formSuccess">
+              <i class="ph ph-check-circle"></i> Message sent! I'll get back to you soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">
+          <span class="logo-bracket">{</span>HV<span class="logo-bracket">}</span>
+        </span>
+        <p class="footer-text">
+          Designed & built by <strong>Hemavarshini</strong> · Chennai, India
+        </p>
+        <p class="footer-copy">© 2026 · All rights reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
